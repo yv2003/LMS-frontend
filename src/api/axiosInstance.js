@@ -2,7 +2,7 @@ import axios from "axios";
 
 const axiosInstance = axios.create({
   // baseURL: "http://localhost:3000",
-  baseURL: process.env.baseURL
+  baseURL:process.env.PUBLIC_BASE_URL,
 });
 
 axiosInstance.interceptors.request.use(
