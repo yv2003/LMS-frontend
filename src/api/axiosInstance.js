@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:3000",
+  // baseURL: "http://localhost:3000",
+  baseURL:"https://lms-backend-zqvc.onrender.com",
 });
 
 axiosInstance.interceptors.request.use(
