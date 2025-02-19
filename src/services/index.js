@@ -16,7 +16,11 @@ export async function loginService(formData) {
 }
 
 export async function checkAuthService() {
-  const { data } = await axiosInstance.get("/auth/check-auth");
+  const { data } = await axiosInstance.get("/auth/check-auth",{
+      headers: {
+        Authorization: sessionStorage.getItem("accessToken")
+      }
+    });
 
   return data;
 }
